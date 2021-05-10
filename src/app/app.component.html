@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon_0ad6d679225c20cd92dcd081a4346e23.ico" />
+    <title>Xbox</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    &nbsp;
+    <a class="navbar-brand" href="#">
+      <img src="../assets/1024px-Xbox_one_logo.svg.png" width="30" height="30" alt="" style="padding-left: 1%;">
+    </a>
+    <a class="navbar-brand" href="#">Xbox Mexico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link" href="#">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/beneficios" routerLinkActive="active" class="nav-link" href="#">Beneficios</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/galeria" routerLinkActive="active" class="nav-link" href="#">Galeria</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+    
+    <img src="../assets/xbox-logo.png" alt="" width="20%" style="background-color: rgb(185, 224, 201); display: block; margin: auto;">
+    
+      <br>
+      <router-outlet></router-outlet>
+      <br>
+      <div class="cuadro">
+        <h5>
+        <p>Para nosotros es importante saber de donde nos visitas:</p>
+        <form action="">
+            <input type="radio" value="Mexico" name="Mexico" [(ngModel)]="pais">Mexico
+            <input type="radio" value="Otro" name="Otro" [(ngModel)]="pais">Otro pais <br>
+            {{pais}}
+        </form>
+        <br>
+        <p *ngIf="flag">Aparezco cuando el Bool flag es Verdadero</p>
+        <br>
+        <p>Uso de Filtros: {{title | uppercase}}, {{title | lowercase}}</p>
+      </h5>
+    </div>
+    <br>
+      <footer id="bl" style="padding: 0; height: auto !important;">
+        <div class="sans" style="background-color: blue; border-top-left-radius: 5px; border-top-right-radius: 5px; display: flex; height: auto !important;">
+        <div style=" padding: 1%; flex: auto; height: auto;" class="izq">
+            <img src="../assets/5863445d5245b32fb476bad58a8e290f.png" alt="" style="height: 40px; width: auto;" class="img-fluid">
+        </div>
+        </div>
+        <div style="background-color: #08581c ; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; height: 20%; color: black">
+           <br>
+            <nav style="text-align: center" class="rob">Xbox Mexico ©️ 2021</nav>
+            <br>
+        </div>
+        </footer>
+</body>
+</html>
